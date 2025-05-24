@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Verificar rostro</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style2.css') }}">
+</head>
+<body>
+    <h1>Verifica tu rostro</h1>
+    <video id="video" width="640" height="480" autoplay playsinline></video>
+    <button type="button" id="capturar">Verificar cara</button>
+    <canvas id="canvas" width="640" height="480" style="display:none;"></canvas>
+    <div id="mensaje"></div>
+    <script src="{{ url_for('static', filename='verificar.js') }}"></script>
+</body>
+</html>

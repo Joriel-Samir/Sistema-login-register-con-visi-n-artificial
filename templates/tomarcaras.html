@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,
+    initial-scale=1.0">
+    <title>
+        Tomar video
+    </title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style3.css') }}">
+
+</head>
+<body>
+    <h1> Grabar </h1>
+    <video id="video" width="640" height="480" autoplay playsinline></video>
+    <form id="formulario" method="POST">
+        <button type="button" id="capturar">Tomar cara</button>
+        <input type="hidden" id="imagenBase64" name="imagenBase64">
+    </form>
+    <canvas id="canvas" width="640" height="480" style="display:none;"></canvas>
+    <script src="{{ url_for('static', filename='script2.js') }}"></script>
+</body>
+</html>
