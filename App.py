@@ -67,7 +67,7 @@ def registrar():
 def procesar_imagen():
     data = request.get_json()
     image_base64 = data.get('image')
-    username = session.get('username')  # Recuperar de sesión
+    username = session.get('username')  
 
     if not username:
         return jsonify({'message': 'No hay usuario en sesión'}), 400
@@ -129,7 +129,7 @@ def verificar_imagen():
 
     print("Tamaño embedding guardado:", len(embedding_guardado.split(',')))
     print("Tamaño embedding login:", len(embedding_login_str.split(',')))
-    print("Embedding guardado:", embedding_guardado[:100], "...")  # Solo los primeros 100 caracteres
+    print("Embedding guardado:", embedding_guardado[:100], "...")  
     print("Embedding login:", embedding_login_str[:100], "...")
     print("Primeros 10 valores embedding guardado:", embedding_guardado.split(',')[:10])
     print("Primeros 10 valores embedding login:", embedding_login_str.split(',')[:10])
