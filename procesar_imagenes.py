@@ -65,7 +65,7 @@ class ProcesarImagen:
 
 class VerificarImagen:
     def __init__(self):
-        self.imagen_service = ImagenService()
+        self.imagen_service = Imagen()
         self.reconocedor = ReconocedorArcFace()
         self.conexion = Conectar()
 
