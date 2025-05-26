@@ -6,7 +6,7 @@ from login_register import Login, Registrar
 class App:
     def __init__(self):
         self.app = Flask(__name__, static_folder="static", template_folder='templates')
-        self.app.secret_key = 'clave_secreta_segura'
+        self.app.secret_key = 'no_me_vas_a_hakear'
         self.setup_routes()
 
     def setup_routes(self):
