@@ -10,18 +10,21 @@
     <title>
         Tomar video
     </title>
+    
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="{{ url_for('static', filename='style3.css') }}">
 
 </head>
 <body>
     <h1> Grabar </h1>
+    <!-- Sección de cámara para capturar el rostro del usuario -->
     <video id="video" width="640" height="480" autoplay playsinline></video>
     <form id="formulario" method="POST">
         <button type="button" id="capturar">Tomar cara</button>
         <input type="hidden" id="imagenBase64" name="imagenBase64">
     </form>
     <canvas id="canvas" width="640" height="480" style="display:none;"></canvas>
+    <!-- Script que maneja la lógica de captura y envío de la imagen -->
     <script src="{{ url_for('static', filename='script2.js') }}"></script>
 </body>
 </html>

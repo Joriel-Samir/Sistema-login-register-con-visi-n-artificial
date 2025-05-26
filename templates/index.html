@@ -14,6 +14,7 @@
 </head>
 <body>
     <div class="container">
+        <!-- Formulario de login -->
         <div class="form-box login">
             <form action="/login" method="POST">
                 <h1>Login</h1>
@@ -28,6 +29,7 @@
                     <div class="forgot-link"><a href="#">Forgot password</a> </div>
                     <button type="submit" class="btn">Login</button>
                     <p> Or login with social platform </p>
+                <!-- Iconos de login social (no funcionales) -->
                 <div class="social-icons">
                     <a href="#"><i class='bx bxl-google' ></i></a>
                     <a href="#"><i class='bx bxl-facebook-circle' ></i></a>
@@ -36,7 +38,7 @@
                 </div>
             </form>
         </div>
-
+                <!-- Formulario de registro -->
                 <div class="form-box register">
             <form action="/registrar" method="POST">
                 <h1>Registration</h1>
@@ -63,6 +65,7 @@
             </form>
         </div>
         
+         <!-- Paneles de alternancia entre login y registro -->
         <div class="toggle-box">
             <div class="toggle-panel toggle-left">
                 <h1>Hola bienvenido</h1>
@@ -76,6 +79,7 @@
             </div>
         </div>
     </div>
+    <!-- Script para alternar entre login y registro -->
     <script src="{{ url_for('static', filename='scritpt.js') }}"></script>
 </body>
 </html>

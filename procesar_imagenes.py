@@ -7,6 +7,8 @@ from datetime import datetime
 
 class Imagen:
     def guardar_imagen(self, image_base64, username, filename=None):
+        #Decodifica la imagen base64, la guarda en disco y retorna la ruta del archivo.
+
         try:
             image_data = image_base64.split(',')[1]
             image_bytes = base64.b64decode(image_data)
@@ -24,6 +26,11 @@ class Imagen:
 
 
 class ProcesarImagen:
+    #Procesa la imagen enviada por el usuario para registro facial:
+    #Guarda la imagen
+    #Extrae el embedding facial
+    #Guarda el embedding en la base de datos
+    
     def __init__(self):
         self.imagen_service = Imagen()
         self.reconocedor = ReconocedorArcFace()
@@ -63,6 +70,11 @@ class VerificarImagen:
         self.conexion = Conectar()
 
     def verificar(self):
+        #Verifica la imagen enviada por el usuario para login facial
+        #Busca el embedding guardado
+        #Extrae el embedding de la imagen enviada
+        #Compara ambos embeddings
+        
         try:
             data = request.get_json()
             image_base64 = data.get('image')

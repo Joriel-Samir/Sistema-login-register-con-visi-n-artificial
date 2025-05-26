@@ -7,9 +7,12 @@
 </head>
 <body>
     <h1>Verifica tu rostro</h1>
+    <!-- Sección de cámara para verificación facial -->
     <video id="video" width="640" height="480" autoplay playsinline></video>
     <button type="button" id="capturar">Verificar cara</button>
+    <!-- Canvas oculto para capturar la imagen del video -->
     <canvas id="canvas" width="640" height="480" style="display:none;"></canvas>
+    <!-- Mensaje de estado para mostrar resultados de la verificación -->
     <div id="mensaje"></div>
     <script src="{{ url_for('static', filename='verificar.js') }}"></script>
 </body>
